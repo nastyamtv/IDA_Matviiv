@@ -1,0 +1,21 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+    'ratings': [4, 5, 3, 2, 5, 4, 3, 1, 5, 2],
+    # додайте інші колонки свого DataFrame за потребою
+}
+
+df = pd.DataFrame(data)
+
+
+sns.histplot(data=df, x='ratings', bins=5, kde=False, color='skyblue')
+
+
+plt.title('Distribution of Ratings')
+plt.xlabel('Rating')
+plt.ylabel('Count')
+
+# Показуємо графік
+plt.show()
